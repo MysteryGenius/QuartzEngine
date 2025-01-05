@@ -7,13 +7,35 @@
   <title>Quartz</title>
 </head>
 
-<body onkeydown="return userControl(event)">
+<body onkeydown="return userControl(event)" onload="var game = new Game(); gEngine.Core.initializeEngineCore()">
   <main>
-    <canvas id="canvas"></canvas>
+    <table style="padding: 2px;">
+      <tr>
+        <td>
+          <div>
+            <canvas id="canvas"></canvas>
+          </div>
+        </td>
+        <td>
+          <div id="uiEchoString"></div>
+        </td>
+      </tr>
+    </table>
   </main>
 
+  <script type="text/javascript" src="Lib/Vec2.js"></script>
+
+  <!-- RigidBodies -->
+  <script type="text/javascript" src="RigidBody/RigidShape.js"></script>
+  <script type="text/javascript" src="RigidBody/Rectangle.js"></script>
+  <script type="text/javascript" src="RigidBody/Circle.js"></script>
+
+
   <script type="text/javascript" src="EngineCore/Core.js"></script>
+  <script type="text/javascript" src="Game.js"></script>
   <script type="text/javascript" src="EngineCore/Control.js"></script>
+
+
 </body>
 
 </html>
